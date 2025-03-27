@@ -21,7 +21,8 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('gakrecords.apps.gakstudio.urls')),
+    path('', include('gakrecords.apps.codehigh.urls')),
+    path('gakstudio/', include('gakrecords.apps.gakstudio.urls')),
 ]
 
 if settings.DEBUG:

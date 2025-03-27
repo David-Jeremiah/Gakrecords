@@ -1,0 +1,797 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Code High School</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="shortcut icon" type="image/x-icon" href="{% static 'codehigh/images/logo.png' %}">
+  
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'codehigh/plugins/bootstrap/bootstrap.min.css' %}">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{% static 'codehigh/plugins/slick/slick.css' %}">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{% static 'codehigh/plugins/themify-icons/themify-icons.css' %}">
+  <!-- animation css -->
+  <link rel="stylesheet" href="{% static 'codehigh/plugins/animate/animate.css' %}">
+  <!-- aos -->
+  <link rel="stylesheet" href="{% static 'codehigh/plugins/aos/aos.css' %}">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{% static 'codehigh/plugins/venobox/venobox.css' %}">
+
+  <!-- Main Stylesheet -->
+  <link href="{% static 'codehigh/css/style.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+  
+
+<!-- header -->
+<header class="fixed-top header">
+  <!-- top header -->
+  <div class="top-header py-2 bg-white">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-lg-4 text-center text-lg-left">
+          <a class="text-color mr-3" href="callto:0773295900"><b><strong>CALL</strong>:</b> 0773 295 900 / 0702 192 841</a>
+          <ul class="list-inline d-inline">
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#"><i class="ti-instagram"></i></a></li>
+          </ul>
+        </div>
+        <div class="col-lg-8 text-center text-lg-right">
+          <ul class="list-inline">
+<!--            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'codehigh:notice' %}">notice</a></li>-->
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'codehigh:research' %}">GALLERY</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'codehigh:scholarship' %}">SCHOLARSHIP</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#loginModal">login</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#" data-toggle="modal" data-target="#signupModal">register</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- navbar -->
+  <div class="navigation w-100">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light p-0">
+        <a class="navbar-brand" href="index.html"><img src="{% static 'codehigh/images/logo.png' %}" alt="logo"></a>
+        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
+          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navigation">
+          <ul class="navbar-nav ml-auto text-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item @@about">
+              <a class="nav-link" href="{% url 'codehigh:about' %}">About</a>
+            </li>
+            <li class="nav-item @@courses">
+              <a class="nav-link" href="{% url 'codehigh:courses' %}">Academics</a>
+            </li>
+            <li class="nav-item @@events">
+              <a class="nav-link" href="{% url 'codehigh:events' %}">EVENTS</a>
+            </li>
+             <li class="nav-item dropdown view">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                School Life
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/">Articles</a>
+                <a class="dropdown-item" href="{% url 'codehigh:research' %}">Gallery</a>
+                <a class="dropdown-item" href="/">Clubs</a>
+                <a class="dropdown-item" href="/">Notice Details</a>
+<!--                <a class="dropdown-item" href="research.html">Research</a>-->
+                <a class="dropdown-item" href="{% url 'codehigh:scholarship' %}">Scholarship</a>
+<!--                <a class="dropdown-item" href="course-single.html">Course Details</a>-->
+                <a class="dropdown-item" href="{% url 'codehigh:events' %}">Event Details</a>
+                <a class="dropdown-item" href="/">Blog Details</a>
+              </div>
+            </li>
+            <li class="nav-item @@contact">
+              <a class="nav-link" href="{% url 'codehigh:contact' %}">CONTACT</a>
+            </li>
+            <li class="nav-item @@blog">
+              <a class="nav-link admission-btn" href="blog.html">ADMISSION</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+<!-- /header -->
+<!-- Modal -->
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content rounded-0 border-0 p-4">
+            <div class="modal-header border-0">
+                <h3>Register</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="login">
+                    <form action="#" class="row">
+                        <div class="col-12">
+                            <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Phone">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Name">
+                        </div>
+                        <div class="col-12">
+                            <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email">
+                        </div>
+                        <div class="col-12">
+                            <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Password">
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-primary">SIGN UP</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content rounded-0 border-0 p-4">
+            <div class="modal-header border-0">
+                <h3>Login</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="#" class="row">
+                    <div class="col-12">
+                        <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Phone">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Name">
+                    </div>
+                    <div class="col-12">
+                        <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Password">
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">LOGIN</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- hero slider -->
+<section class="hero-section overlay bg-cover" data-background="{% static 'codehigh/images/banner/banner-2.jpg' %}">
+  <div class="container">
+    <div class="hero-slider">
+      <!-- slider item -->
+      <div class="hero-slider-item">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="text-white" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".1">Your bright future is our mission</h1>
+            <p class="text-muted mb-4" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".4">We are committed to providing quality education,
+              strong values, and the right opportunities to help every student succeed in life.</p>
+            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutRight" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInLeft" data-delay-in=".7">Apply now</a>
+          </div>
+        </div>
+      </div>
+      <!-- slider item -->
+      <div class="hero-slider-item">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="text-white" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".1">Shaping Young Minds for a Brighter Tomorrow.</h1>
+            <p class="text-muted mb-4" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".4">We are committed to providing knowledge, skills,
+              and values that will help students excel in academics, personal growth, and career opportunities</p>
+            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutUp" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInDown" data-delay-in=".7">Apply now</a>
+          </div>
+        </div>
+      </div>
+      <!-- slider item -->
+      <div class="hero-slider-item">
+        <div class="row">
+          <div class="col-md-8">
+            <h1 class="text-white" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".1">Equipping hearts and minds for God's purpose</h1>
+            <p class="text-muted mb-4" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="fadeInUp" data-delay-in=".4">We believe that true education encompasses both intellectual
+              and spiritual growth</p>
+            <a href="contact.html" class="btn btn-primary" data-animation-out="fadeOutDown" data-delay-out="5" data-duration-in=".3" data-animation-in="zoomIn" data-delay-in=".7">Apply now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /hero slider -->
+
+<!-- banner-feature -->
+<section class="bg-gray">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-xl-4 col-lg-5 align-self-end">
+        <img class="img-fluid w-100" src="{% static 'codehigh/images/banner/banner-feature1.png' %}" alt="banner-feature" >
+      </div>
+      <div class="col-xl-8 col-lg-7">
+        <div class="row feature-blocks bg-gray justify-content-between g-4">
+          <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Mission</h3>
+            <p>To educate inspire, Transform and Nurture students for leadersip</p>
+          </div>
+          <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="ti-blackboard mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-5 mb-4">Our Vision</h3>
+            <p>To raise up future leaders of Uganda and beyond that are both rooted in Jesus and Confident in who he has created them to be</p>
+          </div>
+          <div class="col-sm-10 col-xl-7 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="ti-agenda mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">Our Curriculum</h3>
+            <p>We offer all the essential subjects in the Old & New Curriculum of the Ugandan Education System. That include; English, Mathematics, Biology, chemistry, Physics,
+              Geography, Agriculture, CRE, History and Political Education, Entrepreneurship, Art & Design, Kiswahili, Luganda, Economics and Technical Drawing.</p>
+          </div>
+          <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="ti-write mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-5 mb-4">Core values</h3>
+            <p>
+              •	God fearing<br>
+              •	Academic excellence<br>
+              •	Leadership empowerment <br>
+              •	Talent development<br>
+</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /banner-feature -->
+
+<!-- about us -->
+<section class="section">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-2 order-md-1">
+        <h2 class="section-title">About Code High School</h2>
+        <p>CODE high school is a mixed O’ and A’ level Christian secondary school established in 2016 with a vision to provide access to affordable, quality Christian education to children in Uganda and beyond. It is so far one of the fastest growing private secondary schools in Uganda with a focus on training tomorrows leaders today.  </p>
+        <a href="about.html" class="btn btn-primary-outline">Learn more</a>
+      </div>
+      <div class="col-md-6 order-1 order-md-2 mb-4 mb-md-0">
+        <img class="img-fluid w-100" src="{% static 'codehigh/images/about/about-us1.jpg' %}" alt="about image">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /about us -->
+
+<!-- courses -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h2 class="mb-0 text-nowrap mr-3">School Facilities</h2>
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+<!--          <div>-->
+<!--            <a href="courses.html" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>-->
+<!--          </div>-->
+        </div>
+      </div>
+    </div>
+    <!-- course list -->
+<div class="row justify-content-center">
+  <!-- course item -->
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{% static 'codehigh/images/courses/course-12.jpg' %}" alt="course thumb">
+      <div class="card-body">
+        <a href="course-single.html">
+          <h4 class="card-title">Fully Stocked libriary</h4>
+        </a>
+        <p class="card-text mb-4"> Readers of today will be leaders of tomorrow, against such a strong believe we have a fully stocked library
+          that students can access to research and grow in knowledge about what they are learning in class.</p>
+<!--        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>-->
+      </div>
+    </div>
+  </div>
+  <!-- course item -->
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{% static 'codehigh/images/courses/course-22.jpg' %}" alt="course thumb">
+      <div class="card-body">
+        <a href="course-single.html">
+          <h4 class="card-title">Well Equiped Laboratories</h4>
+        </a>
+        <p class="card-text mb-4"> Code High School offers Arts and Sciences hence we have put in place a modern
+          laboratory to cater for students that offer sciences such as biology,chemistry and physics</p>
+<!--        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>-->
+      </div>
+    </div>
+  </div>
+  <!-- course item -->
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{% static 'codehigh/images/courses/course-31.jpg' %}" alt="course thumb">
+      <div class="card-body">
+        <a href="course-single.html">
+          <h4 class="card-title">Well equiped Computer lab</h4>
+        </a>
+        <p class="card-text mb-4"> "Innovators of today will be pioneers of tomorrow. With this strong belief, we have a fully equipped computer
+          lab where students can explore, research, and sharpen their digital skills, preparing them for a tech-driven future.</p>
+<!--        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>-->
+      </div>
+    </div>
+  </div>
+  <!-- course item -->
+<!--  <div class="col-lg-4 col-sm-6 mb-5">-->
+<!--    <div class="card p-0 border-primary rounded-0 hover-shadow">-->
+<!--      <img class="card-img-top rounded-0" src="images/courses/course-4.jpg" alt="course thumb">-->
+<!--      <div class="card-body">-->
+<!--        <ul class="list-inline mb-2">-->
+<!--          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>-->
+<!--          <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>-->
+<!--        </ul>-->
+<!--        <a href="course-single.html">-->
+<!--          <h4 class="card-title">Complete Freelancing</h4>-->
+<!--        </a>-->
+<!--        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor-->
+<!--          incididunt ut labore et dolore magna.</p>-->
+<!--        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+  <!-- course item -->
+<!--  <div class="col-lg-4 col-sm-6 mb-5">-->
+<!--    <div class="card p-0 border-primary rounded-0 hover-shadow">-->
+<!--      <img class="card-img-top rounded-0" src="images/courses/course-5.jpg" alt="course thumb">-->
+<!--      <div class="card-body">-->
+<!--        <ul class="list-inline mb-2">-->
+<!--          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>-->
+<!--          <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>-->
+<!--        </ul>-->
+<!--        <a href="course-single.html">-->
+<!--          <h4 class="card-title">Branding Design</h4>-->
+<!--        </a>-->
+<!--        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor-->
+<!--          incididunt ut labore et dolore magna.</p>-->
+<!--        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+  <!-- course item -->
+<!--  <div class="col-lg-4 col-sm-6 mb-5">-->
+<!--    <div class="card p-0 border-primary rounded-0 hover-shadow">-->
+<!--      <img class="card-img-top rounded-0" src="images/courses/course-6.jpg" alt="course thumb">-->
+<!--      <div class="card-body">-->
+<!--        <ul class="list-inline mb-2">-->
+<!--          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>-->
+<!--          <li class="list-inline-item"><a class="text-color" href="#">Humanities</a></li>-->
+<!--        </ul>-->
+<!--        <a href="course-single.html">-->
+<!--          <h4 class="card-title">Art Design</h4>-->
+<!--        </a>-->
+<!--        <p class="card-text mb-4"> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor-->
+<!--          incididunt ut labore et dolore magna.</p>-->
+<!--        <a href="course-single.html" class="btn btn-primary btn-sm">Apply now</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>
+<!-- /course list -->
+    <!-- mobile see all button -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="courses.html" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">sell all</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /courses -->
+
+<!-- cta -->
+<section class="section bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <h2 class="section-title text-white">Why choose <b>Code high School</b></h2>
+
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><h7>Its More Than Just Education </h7></div>
+          <div class="accordion_panel">
+            <p>At Code High School, we believe in nurturing the whole student – mind, body, and spirit.
+              We provide a supportive and challenging environment where students can thrive academically, grow in faith, and develop into responsible, well-rounded individuals.</p>
+          </div>
+        </div>
+        <div class="accordion_container">
+          <div class="accordion d-flex flex-row align-items-center"><h7> Unlocking Leadership Through Academic Excellence</h7></div>
+          <div class="accordion_panel">
+            <p>Code High School is committed to empowering the next generation of Ugandan leaders.
+              We provide a holistic education that prepares students to contribute to the development of our nation</p>
+          </div>
+        </div>
+           <div class="accordion_container">
+            <div class="accordion d-flex flex-row align-items-center"> <h7>Christian life</h7></div>
+               <div class="accordion_panel">
+               <p>The spiritual life of our children is taken care of through highly enriched Christian Programs that include; counselling, discipleship,
+              prayer, identification & nurturing of Spiritual gifts in every child under the guidance of Chaplaincy & an Active Scripture Union. </p>
+             </div>
+                     <br>
+          <a href="contact.html" class="btn btn-secondary">Apply now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /cta -->
+
+<!-- success story -->
+<section class="section bg-cover" data-background="{% static 'codehigh/images/backgrounds/success-story.jpg' %}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-4 position-relative success-video">
+        <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
+          <i class="ti-control-play"></i>
+        </a>
+      </div>
+      <div class="col-lg-6 col-sm-8">
+        <div class="bg-white p-5">
+          <h2 class="section-title">Alumni Stories</h2>
+          <p>"Code High School was more than just a school—it was a place of growth, faith, and transformation. It shaped me academically, built my character,
+            and deepened my walk with God. The teachers didn’t just teach; they mentored us, instilling discipline, leadership, and a strong Christian foundation</p>
+          <p>Through every lesson, devotion, and challenge, I learned to trust God, work hard, and lead with integrity. The friendships I made and the values I gained
+            continue to guide me in life. I am proud to be an alumnus of a school that not only prepared me for the future but also for a purpose-driven life.</p>
+          <h4> Kiganda Clinton, Code High School Alumni</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /success story -->
+
+<!-- events -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h2 class="mb-0 text-nowrap mr-3">Upcoming Events</h2>
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          <div>
+            <a href="events.html" class="btn btn-sm btn-primary-outline ml-sm-3 d-none d-sm-block">see all</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+  <!-- event -->
+  <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+    <div class="card border-0 rounded-0 hover-shadow">
+      <div class="card-img position-relative">
+        <img class="card-img-top rounded-0" src="{% static 'codehigh/images/events/event-12.jpg' %}" alt="event thumb">
+        <div class="card-date"><span>18</span><br>April</div>
+      </div>
+      <div class="card-body">
+        <!-- location -->
+<!--        <p><i class="ti-location-pin text-primary mr-2"></i>School</p>-->
+        <a href="event-single.html"><h4 class="card-title">Good Friday</h4></a>
+      </div>
+    </div>
+  </div>
+  <!-- event -->
+  <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+    <div class="card border-0 rounded-0 hover-shadow">
+      <div class="card-img position-relative">
+        <img class="card-img-top rounded-0" src="{% static 'codehigh/images/events/event-22.jpg' %}" alt="event thumb">
+        <div class="card-date"><span>20</span><br>April</div>
+      </div>
+      <div class="card-body">
+        <!-- location -->
+<!--        <p><i class="ti-location-pin text-primary mr-2"></i>School</p>-->
+        <a href="event-single.html"><h4 class="card-title">Easter Sunday</h4></a>
+      </div>
+    </div>
+  </div>
+  <!-- event -->
+  <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+    <div class="card border-0 rounded-0 hover-shadow">
+      <div class="card-img position-relative">
+        <img class="card-img-top rounded-0" src="{% static 'codehigh/images/events/event-33.jpg' %}" alt="event thumb">
+        <div class="card-date"><span>25</span><br>April</div>
+      </div>
+      <div class="card-body">
+        <!-- location -->
+<!--        <p><i class="ti-location-pin text-primary mr-2"></i>Dhanmondi Lake, Dhaka</p>-->
+        <a href="event-single.html"><h4 class="card-title">Breaking of Date</h4></a>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- mobile see all button -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="course.html" class="btn btn-sm btn-primary-outline d-sm-none d-inline-block">sell all</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /events -->
+
+<!-- teachers -->
+<section class="section">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12">
+        <h2 class="section-title">School Administration</h2>
+      </div>
+      <!-- teacher -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{% static 'codehigh/images/teachers/teacher-1.jpg' %}" alt="teacher">
+          <div class="card-body">
+            <a href="teacher-single.html">
+              <h4 class="card-title">Joyce </h4>
+            </a>
+            <p>HeadTeacher</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- teacher -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{% static 'codehigh/images/teachers/teacher-2.jpg' %}" alt="teacher">
+          <div class="card-body">
+            <a href="teacher-single.html">
+              <h4 class="card-title">Moses</h4>
+            </a>
+            <p>Deputy HeadTeacher</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- teacher -->
+      <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+        <div class="card border-0 rounded-0 hover-shadow">
+          <img class="card-img-top rounded-0" src="{% static 'codehigh/images/teachers/teacher-3.jpg' %}" alt="teacher">
+          <div class="card-body">
+            <a href="teacher-single.html">
+              <h4 class="card-title">Mary </h4>
+            </a>
+            <p>Bursar</p>
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-facebook"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-twitter-alt"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-google"></i></a></li>
+              <li class="list-inline-item"><a class="text-color" href="#"><i class="ti-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /teachers -->
+
+<!-- blog -->
+<section class="section pt-0">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h2 class="section-title">Latest News</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+  <!-- blog post -->
+  <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{% static 'codehigh/images/blog/post-22.jpg' %}" alt="Post thumb">
+      <div class="card-body">
+        <!-- post meta -->
+        <ul class="list-inline mb-3">
+          <!-- post date -->
+          <li class="list-inline-item mr-3 ml-0">Febuary 5, 2025</li>
+          <!-- author -->
+          <li class="list-inline-item mr-3 ml-0">By Uneb</li>
+        </ul>
+        <a href="blog-single.html">
+          <h4 class="card-title">Release of the Form 4 results</h4>
+        </a>
+        <p class="card-text">Uganda Examination Board released the Form Four results where students from Code high school performed highly</p>
+        <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
+      </div>
+    </div>
+  </article>
+  <!-- blog post -->
+  <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{% static 'codehigh/images/blog/post-12.jpg' %}" alt="Post thumb">
+      <div class="card-body">
+        <!-- post meta -->
+        <ul class="list-inline mb-3">
+          <!-- post date -->
+          <li class="list-inline-item mr-3 ml-0">February 13, 2025</li>
+          <!-- author -->
+          <li class="list-inline-item mr-3 ml-0">By Mugisha Cohen</li>
+        </ul>
+        <a href="blog-single.html">
+          <h4 class="card-title">Interschool Debate</h4>
+        </a>
+        <p class="card-text">Code high school participated in the interschool deabte and emerged as the regional winners.</p>
+        <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
+      </div>
+    </div>
+  </article>
+  <!-- blog post -->
+  <article class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
+    <div class="card rounded-0 border-bottom border-primary border-top-0 border-left-0 border-right-0 hover-shadow">
+      <img class="card-img-top rounded-0" src="{% static 'codehigh/images/blog/post-33.jpg' %}" alt="Post thumb">
+      <div class="card-body">
+        <!-- post meta -->
+        <ul class="list-inline mb-3">
+          <!-- post date -->
+          <li class="list-inline-item mr-3 ml-0">March 10, 2025</li>
+          <!-- author -->
+          <li class="list-inline-item mr-3 ml-0">By Kiganda Clinton</li>
+        </ul>
+        <a href="blog-single.html">
+          <h4 class="card-title">Orientation Program for the new students</h4>
+        </a>
+        <p class="card-text">The school recieved the new students who excelled in their PLE and UCE</p>
+        <a href="blog-single.html" class="btn btn-primary btn-sm">read more</a>
+      </div>
+    </div>
+  </article>
+</div>
+  </div>
+</section>
+<!-- /blog -->
+
+<!-- footer -->
+<footer>
+  <!-- newsletter -->
+  <div class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+          <h3 class="text-white">Subscribe Now</h3>
+          <form action="#">
+            <div class="input-wrapper">
+              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
+              <button type="submit" value="send" class="btn btn-primary">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer content -->
+  <div class="footer bg-footer section border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <!-- logo -->
+          <a class="logo-footer" href="index.html"><img class="img-fluid mb-4" src="{% static 'codehigh/images/logo.png' %}" alt="logo"></a>
+          <ul class="list-unstyled">
+            <li class="mb-2">Seeta Bajjo, 1.5km off Jinja Road, Kigunga Trading Centre.</li>
+            <li class="mb-2">+256 773 295 900 </li>
+            <li class="mb-2">+256 702 192 841</li>
+            <li class="mb-2">contact@codehighschool.com</li>
+          </ul>
+        </div>
+        <!-- company -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">Our School</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="about.html">About Us</a></li>
+            <li class="mb-3"><a class="text-color" href="teacher.html">Our Teacher</a></li>
+            <li class="mb-3"><a class="text-color" href="contact.html">Contact</a></li>
+            <li class="mb-3"><a class="text-color" href="gallary.html">Gallery</a></li>
+          </ul>
+        </div>
+        <!-- links -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">LINKS</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="courses.html">Academics</a></li>
+            <li class="mb-3"><a class="text-color" href="event.html">Events</a></li>
+            <li class="mb-3"><a class="text-color" href="gallary.html">School facilities</a></li>
+            <li class="mb-3"><a class="text-color" href="faqs.html">FAQs</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+<!--        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">-->
+<!--          <h4 class="text-white mb-5">SUPPORT</h4>-->
+<!--          <ul class="list-unstyled">-->
+<!--            <li class="mb-3"><a class="text-color" href="#">Forums</a></li>-->
+<!--            <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>-->
+<!--            <li class="mb-3"><a class="text-color" href="#">Language</a></li>-->
+<!--            <li class="mb-3"><a class="text-color" href="#">Release Status</a></li>-->
+<!--          </ul>-->
+<!--        </div>-->
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">RECOMMEND</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Application</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Events</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Notice</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Uneb Results</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright -->
+  <div class="copyright py-4 bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 text-sm-left text-center">
+          <p class="mb-0">Copyright
+            <script>
+              var CurrentYear = new Date().getFullYear()
+              document.write(CurrentYear)
+            </script> 
+            © Theme By <a href="https://amayatech.com">amayatech.com</a></p> . All Rights Reserved.
+        </div>
+        <div class="col-sm-5 text-sm-right text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.facebook.com/themefisher"><i class="ti-facebook text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.twitter.com/themefisher"><i class="ti-twitter-alt text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="#"><i class="ti-instagram text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://dribbble.com/themefisher"><i class="ti-dribbble text-primary"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="{% static 'codehigh/plugins/jQuery/jquery.min.js' %}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'codehigh/plugins/bootstrap/bootstrap.min.js' %}"></script>
+<!-- slick slider -->
+<script src="{% static 'codehigh/plugins/slick/slick.min.js' %}"></script>
+<!-- aos -->
+<script src="{% static 'codehigh/plugins/aos/aos.js' %}"></script>
+<!-- venobox popup -->
+<script src="{% static 'codehigh/plugins/venobox/venobox.min.js' %}"></script>
+<!-- mixitup filter -->
+<script src="{% static 'codehigh/plugins/mixitup/mixitup.min.js' %}"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU&libraries=places"></script>
+<script src="{% static 'codehigh/plugins/google-map/gmap.js' %}"></script>
+
+<!-- Main Script -->
+<script src="{% static 'codehigh/js/script.js' %}"></script>
+
+</body>
+</html>
